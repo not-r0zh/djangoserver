@@ -1,0 +1,46 @@
+<style type="text/css">
+.borde{
+	border: 10px solid black;
+	padding: 10px;
+	text-align: center;
+}
+.colorred{
+	color: red;
+}
+.btn{
+	align-content: center;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	background-color: #647295;
+	border: 2px solid #647295;
+	padding: 5px 20px;
+	text-align: center;
+}
+.aling{
+	text-align: center;
+}
+</style>
+<h1 class="borde">There {{variable1}} <span class="colorred">{{count}}</span> {{variable2}} in your text</h1>
+
+<br/>
+
+<form class="borde">
+	<h1>Your text:</h1>
+	{{fulltext}}
+
+	<h1>Word Count:</h1>
+	{% for word, counttotal in sortedwords%}
+	{{ word }} -> {{ counttotal }}
+	<br/>
+	{% endfor %}
+	<br/>	
+</form>
+
+<br/>
+
+<form action="{% url 'home' %}" class="aling">
+	<button class="btn">Count words again</button>
+</form>
+
+<p style="text-align: center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lmtIOUFvHKxgl6zDIJtSZXy5yFMeci1LzQ&usqp=CAU"><br/>This dog has too much drip</p>

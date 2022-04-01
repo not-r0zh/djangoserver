@@ -1,0 +1,47 @@
+<style>
+.btn1{
+	color: white;
+	background-color: green;
+	border: 2px solid green;
+	padding: 10px 25px;
+	text-align: center;
+}
+.btn2{
+	padding: 10px;
+	color: white;
+	background-color: #647295;
+	border: 2px solid #647295;
+	padding: 5px 20px;
+	text-align: center;
+}
+.pos{
+	position: fixed; bottom: 0px; right: 0px;
+}
+.solidarea{
+	padding: 10px;
+}
+.btn3{
+	color: white;
+	background-color: #9abd9a;
+	border: 2px solid #9abd9a;
+	padding: 10px 25px;
+	text-align: center;
+}
+
+</style>
+
+<h1 style="text-align: center; font-family: sans-serif;">WORD COUNTER</h1>
+<form action="{% url 'count' %}" style="text-align: center;">
+	<textarea class="" cols="50" rows="6" name="fulltext"></textarea>
+	<br/>
+	<br/>
+	<button class= "btn2" type="sumbit">Count</button>
+
+</form>
+<form action="{% url 'about' %}" style="text-align: center;">
+	<button class="pos btn1" type="sumbit">About</button>
+
+<form action="{% url 'about' %}" style="text-align: center;">
+	<button class="pos btn3" type="sumbit">About</button>
+
+</form>
